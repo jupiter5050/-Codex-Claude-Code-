@@ -471,10 +471,10 @@ export function MotherAgentMain() {
 // mode (delegate this turn to an installed CLI agent). Hidden when no
 // supported agent is installed locally.
 
+// Scope narrowed to Claude Code only — Hermes Agent and OpenClaw were
+// dropped to focus polish on the one agent we actively support.
 const PARASITE_LABELS: Record<string, string> = {
-  hermes: 'Hermes Agent',
   claudecode: 'Claude Code',
-  openclaw: 'OpenClaw',
 };
 
 interface ParasitePickerProps {
@@ -492,8 +492,8 @@ function ParasitePicker({ locale, available, current, onChange, disabled }: Para
   const zh = locale === 'zh' || locale === 'zh-Hans';
   const label = zh ? '接入' : 'Connect';
   const tooltip = zh
-    ? '我擅长 AI 起步 — 短暂记忆 + 一套成熟的安装部署脚本，帮你跑通各种 AI 代理。想正经长聊？装好 Claude Code、Hermes Agent 或 OpenClaw 后，点 接入 让它们接手对话。'
-    : "I'm built for AI onboarding — short memory, but battle-tested install/deploy scripts that get you running with any AI agent. Want a real long-form conversation? Install Claude Code, Hermes Agent, or OpenClaw, then tap Connect to hand the chat over.";
+    ? '我擅长 AI 起步 — 短暂记忆 + 一套成熟的安装部署脚本，帮你跑通各种 AI 代理。想正经长聊？装好 Claude Code 后，点 接入 让它接手对话。'
+    : "I'm built for AI onboarding — short memory, but battle-tested install/deploy scripts that get you running with any AI agent. Want a real long-form conversation? Install Claude Code, then tap Connect to hand the chat over.";
   const activeLabel = current ? PARASITE_LABELS[current] || current : null;
   const noneInstalled = available.length === 0;
   const exitLabel = zh ? '断开接入' : 'Disconnect';
