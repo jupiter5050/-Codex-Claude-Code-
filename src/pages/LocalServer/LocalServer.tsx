@@ -168,23 +168,23 @@ export const LocalServerMain: React.FC = () => {
   const hasNvidiaGpu = systemInfo ? systemInfo.hasNvidiaGpu : false;
   const hasAmdGpu = systemInfo ? ((systemInfo as any).hasAmdGpu ?? false) : false;
   const runtimeOptions = [
-    // llama.cpp: Windows / macOS only — Linux users go to vLLM / SGLang
-    ...(isLinux ? [] : [{ id: 'llama-server', label: 'llama.cpp' }]),
-    // vLLM / SGLang: Linux + NVIDIA or AMD GPU only
+    // Linux + GPU: vLLM / SGLang first (recommended for Linux). llama.cpp last.
     ...(isLinux && (hasNvidiaGpu || hasAmdGpu)
       ? [
           { id: 'vllm', label: 'vLLM' },
           { id: 'sglang', label: 'SGLang' },
         ]
       : []),
+    { id: 'llama-server', label: 'llama.cpp' },
   ];
 
-  // Linux: default runtime swaps from llama-server to vllm once systemInfo loads
+  // Linux + GPU: default runtime swaps from llama-server to vllm so the
+  // selected card matches the first option in the recommended order.
   useEffect(() => {
-    if (isLinux && runtime === 'llama-server') {
+    if (isLinux && (hasNvidiaGpu || hasAmdGpu) && runtime === 'llama-server') {
       setRuntime('vllm');
     }
-  }, [isLinux, runtime, setRuntime]);
+  }, [isLinux, hasNvidiaGpu, hasAmdGpu, runtime, setRuntime]);
 
   // Server state
   const [logs, setLogs] = useState<string[]>([]);
