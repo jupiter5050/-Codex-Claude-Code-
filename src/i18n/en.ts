@@ -211,7 +211,7 @@ const en: Translations = {
   'hint.devInvite':
     'After switching the Codex Desktop / Codex CLI / Claude Desktop model, keep EchoBird running.',
   'hint.myProjects':
-    "Swap the model on your Vibe-Coded app or game — reference Reversi's and AI Translator's models.json, or just copy it.",
+    "Swap the model on your Vibe-Coded app or game — reference Reversi's and AI Translator's models.json, or just copy it to your project.",
   // Mother Agent
   'mother.selectModel': 'Select model',
   'mother.hintInstall': 'Install {agent}',

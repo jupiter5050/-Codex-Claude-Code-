@@ -189,7 +189,7 @@ const ja: Partial<Translations> = {
   'hint.devInvite':
     'Codex Desktop / Codex CLI / Claude Desktop のモデルを切り替えた後は、EchoBird を起動したままにしてください。',
   'hint.myProjects':
-    'Vibe Coding したアプリ / ゲームのモデルを切り替え。リバーシ / AI 翻訳 の models.json を参考にするか、コピーしてください。',
+    'Vibe Coding したアプリ / ゲームのモデルを切り替え。リバーシ / AI 翻訳 の models.json を参考にするか、あなたのプロジェクトにコピーしてください。',
   'mother.selectModel': 'モデルを選択',
   'mother.hintInstall': '{agent} をインストール',
   'mother.enterMessage': 'メッセージを入力...',

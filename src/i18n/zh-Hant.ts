@@ -183,7 +183,7 @@ const zhHant: Partial<Translations> = {
   'hint.devInvite':
     '切換 Codex 桌面端 / Codex CLI / Claude 桌面端 的模型後，請保持 EchoBird 執行。',
   'hint.myProjects':
-    '給你 Vibe Coding 的應用或遊戲切換模型,參考黑白棋和AI翻譯的 models.json 或複製它。',
+    '給你 Vibe Coding 的應用或遊戲切換模型,參考黑白棋和AI翻譯的 models.json 或複製它到你的專案。',
   'mother.selectModel': '選擇模型',
   'mother.hintInstall': '安裝 {agent}',
   'mother.enterMessage': '輸入訊息...',
