@@ -111,18 +111,20 @@ right-panel container, same ToolCard component, same model-apply flow)
 
 ### 4. The reference-app pattern — the most unprecedented piece
 
-When My AI Projects shipped on 2026-05-20, EchoBird did something no
-other AI-tool manager has done before or since:
+EchoBird shipped two complete, real, runnable open-source AI
+applications bundled into the product binary as user-tutorial
+templates — and this was true from **day one of public release**,
+not from a later product update.
 
-**It bundled two complete, real, runnable open-source AI applications
-into the product binary as the user's tutorial templates.**
+**The two reference applications:**
 
 - **Reversi (黑白棋)** — a complete AI-vs-AI Othello game, source at
-  `public/tools/reversi.html` and `tools/reversi/`, with its own
-  `models.json` exposed for the user to inspect.
+  `public/tools/reversi.html` (658 lines) and `tools/reversi/` (game
+  logic + `models.json` + `paths.json` + AI behavior `SKILL.md`
+  prompts).
 - **AI Translator (AI 翻译)** — a complete real-time bilingual
-  translator, source at `public/tools/translator.html` and
-  `tools/translator/`, with its own `models.json` exposed.
+  translator, source at `public/tools/translator.html` (761 lines)
+  and `tools/translator/` (full UI + `models.json` + `paths.json`).
 
 These reference applications are NOT marketing demos. They are NOT
 "hello world" samples. They are **complete, working applications**
@@ -133,18 +135,45 @@ same pattern to their own vibe-coded application — at which point that
 application becomes a first-class card in My AI Projects alongside
 Reversi and AI Translator.
 
-No prior art is known for any of the following:
+**Three-stage evidence chain for architectural intent:**
 
-- An AI-tool desktop manager that ships **complete real applications**
-  as user-tutorial templates rather than as marketing demos.
-- A unified `models.json` convention that lets a user's own app be
-  registered into the desktop manager identically to a built-in app.
+| Stage | Date | Commit | What it proves |
+|---|---|---|---|
+| 1 — Day-one architecture | **2026-03-02** | `546a14ae` | Both reference apps shipped in the initial public commit — 4000+ lines across 12 files (game HTML, translator HTML, config.json, paths.json, AI SKILL.md prompts, SVG icons). This is *not* a retrofit; the reference-app pattern was the architecture from the first second of public history. |
+| 2 — Real maintenance | **2026-03-25** | 8 commits including `2883548b`, `447a86ce`, `a1a66299`, `44a3eaee`, `5b1e2e7b`, `8914d02d`, `33e62d65` | `fix(reversi)` and `fix(translator)` covering UTF-8 corruption, max_tokens, streaming protocol, temperature parameter — the reference apps received first-class production-grade maintenance, proving they were treated as real products, not stubs. |
+| 3 — Formal user-template framing | **2026-05-20** | `5c7d853f`, `1db4f7e2` | Commit message verbatim: *"feat(myProjects): seed Reversi + Translator as user-editable reference copies"*. When My AI Projects shipped, the two already-existing reference apps were *re-positioned* from "internal built-in tools" to "user-editable templates" — completing the user-tutorial pattern. |
+
+**No known prior art for any of the following:**
+
+- An AI-tool desktop manager that ships **complete real AI applications
+  and AI games** as user-tutorial templates rather than as marketing
+  demos.
+- A unified `models.json` + `paths.json` convention that lets a user's
+  own AI app be registered into the desktop manager **identically to a
+  built-in app**.
 - The combination of (a) reference-app-as-template, (b) shared card
-  container between official and user-defined entities, and
-  (c) central Model Nexus pool feeding both.
+  container between official and user-defined entities, and (c) central
+  Model Nexus pool feeding both.
+- Building the above as the architectural foundation **from a project's
+  first public commit**, rather than retrofitting it later.
 
 This entire pattern is claimed as EchoBird-originated trade dress with
-priority from 2026-05-20.
+priority from **2026-03-02** (architecture in place) through
+**2026-05-20** (formal user-template completion).
+
+**Forward-looking note (recorded here as priority anchor).** The
+day-one inclusion of both an AI *game* (Reversi) and an AI *application*
+(Translator) is not incidental — the architecture as published
+2026-03-02 already prefigures EchoBird's product trajectory toward a
+unified surface for AI applications AND AI games. As of 2026-05-22, no
+other company is known to be working in the "desktop AI application +
+AI game store" direction (HuggingFace Spaces is web-hosted demos;
+Ollama Library is model files only; OpenAI's GPTs Store and Anthropic's
+hosted experiences are cloud chat front-ends; Replit / Vercel are
+generic PaaS). Any later entrant in the AI app/game store space whose
+product format adopts three or more of the §3 surfaces or the
+reference-app-as-template pattern from §4 will be evaluated against the
+priority dates documented above.
 
 ### 5. Combined trade-dress threshold (formal version in NOTICE)
 
@@ -337,18 +366,17 @@ EchoBird **首日公开 commit**(2026-03-02,`546a14ae`)在同一个 Tauri
 
 ### 4. 参考应用模板模式 —— 最前无古人的一笔
 
-2026-05-20 我的 AI 项目发布时,EchoBird 做了一件**此前没有任何 AI 工具
-管理器做过的事**:
+EchoBird 把**两个完整的、可运行的、开源的 AI 应用打进产品里**作为用户
+教程模板 —— 而且这件事**首日发布就成立**,不是后期补的。
 
-**把两个完整的、可运行的、开源的 AI 应用,直接打进产品里,作为用户的
-教程模板。**
+**两个参考应用:**
 
-- **黑白棋(Reversi)** —— 一个完整的 AI-vs-AI 黑白棋游戏,源码在
-  `public/tools/reversi.html` 与 `tools/reversi/`,其 `models.json`
-  公开可见供用户阅读。
-- **AI 翻译(AI Translator)** —— 一个完整的实时双语翻译应用,源码在
-  `public/tools/translator.html` 与 `tools/translator/`,其 `models.json`
-  公开可见。
+- **黑白棋(Reversi)** —— 完整的 AI-vs-AI 黑白棋游戏,源码在
+  `public/tools/reversi.html`(658 行)与 `tools/reversi/`(完整逻辑 +
+  `models.json` + `paths.json` + AI 行为 `SKILL.md` prompts)。
+- **AI 翻译(AI Translator)** —— 完整的实时双语翻译应用,源码在
+  `public/tools/translator.html`(761 行)与 `tools/translator/`
+  (完整 UI + `models.json` + `paths.json`)。
 
 这两个参考应用**不是营销 demo**,**不是 hello world 样例**。它们是
 **完整的、能跑的真应用**,**它们的源码就是用户的教程** —— 用户读
@@ -357,16 +385,36 @@ EchoBird **首日公开 commit**(2026-03-02,`546a14ae`)在同一个 Tauri
 上,他的应用立刻就以一张**与黑白棋、AI 翻译并列**的卡片身份注册到「我的
 AI 项目」面板里。
 
+**架构意图的三段证据链:**
+
+| 阶段 | 日期 | Commit | 证明什么 |
+|---|---|---|---|
+| 1 — 首日架构 | **2026-03-02** | `546a14ae` | 两个参考应用在初始公开 commit 就在 —— 12 个文件 4000+ 行(游戏 HTML、翻译 HTML、config.json、paths.json、AI SKILL.md prompts、SVG 图标)。**不是事后补的**;参考应用模式从公开历史第一秒就是 EchoBird 的架构。 |
+| 2 — 真实维护期 | **2026-03-25** | `2883548b`、`447a86ce`、`a1a66299`、`44a3eaee`、`5b1e2e7b`、`8914d02d`、`33e62d65` 等 8 次提交 | `fix(reversi)` / `fix(translator)` 覆盖 UTF-8 修复、max_tokens、streaming 协议、temperature 参数 —— 这两个参考应用**得到生产级一级产品的真实维护**,证明它们是真应用而非占位符。 |
+| 3 — 形式化为用户模板 | **2026-05-20** | `5c7d853f`、`1db4f7e2` | Commit message 原文:*"feat(myProjects): seed Reversi + Translator as user-editable reference copies"*。我的 AI 项目发布时,**已存在的**两个参考应用从「内置工具」**重新定位**为「用户可编辑模板」,完成用户教程模式。 |
+
 **以下组合无任何已知先例:**
 
-- 一个 AI 工具桌面管理器,把**完整可运行的真应用**作为用户教程模板内嵌
-  发布,而不是用营销 demo
-- 统一的 `models.json` 约定,让用户自己写的 AI 应用能用与内置应用**完
-  全相同的方式**注册进桌面管理器
+- 一个 AI 工具桌面管理器,把**完整可运行的真 AI 应用与 AI 游戏**作为用户
+  教程模板内嵌发布,而不是用营销 demo
+- 统一的 `models.json` + `paths.json` 约定,让用户自己写的 AI 应用能
+  **与内置应用完全相同的方式**注册进桌面管理器
 - (a)参考应用作教程模板 + (b)官方工具与用户自定义实体共用同一卡片
   容器 + (c)中央 Model Nexus 池供两者共享 —— **这三件事的组合**
+- 把以上整套作为项目**首次公开 commit 的架构基础**,而不是后期改造
 
-整套模式作为 EchoBird 首创的 trade dress 主张,优先权日 **2026-05-20**。
+整套模式作为 EchoBird 首创的 trade dress 主张,优先权区间
+**2026-03-02(架构就位)→ 2026-05-20(用户模板形式化完成)**。
+
+**前瞻性声明(在此作为优先权锚定记录)。** 首日同时内置一个 AI **游戏**
+(黑白棋)与一个 AI **应用**(翻译器)并非偶然 —— 2026-03-02 公开发布
+的架构本身就已经预示了 EchoBird 朝**「AI 应用 + AI 游戏统一桌面 store」**
+方向的产品轨迹。截至 2026-05-22,**没有已知公司在「桌面 AI 应用 + AI 游戏
+store」方向运营**(HuggingFace Spaces 是网页托管 demo,Ollama Library
+只是模型文件,OpenAI GPTs Store 与 Anthropic 云端体验是云聊天前端,Replit
+/ Vercel 是通用 PaaS)。任何**后续**进入 AI 应用/游戏 store 领域的产品,
+若其产品形态采用 §3 三个或以上界面或 §4 参考应用模板模式,均将依本文档
+记录的优先权日逐项核对。
 
 ### 5. 整体商业外观侵权阈值(正式版在 NOTICE)
 
