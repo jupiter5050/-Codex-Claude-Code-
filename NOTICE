@@ -113,14 +113,18 @@ and (2) specific UI creative points that define the pattern, plus
 
      Critical: the *bundled reference applications* (Reversi + AI
      Translator) — which form the user-tutorial pattern detailed
-     separately below — were ALREADY PRESENT in the same initial
-     commit 546a14ae on 2026-03-02. They were not introduced when
-     MyProjects shipped on 2026-05-20; MyProjects merely
-     re-positioned the already-existing reference apps from
-     "internal built-in tools" to "user-editable templates". The
-     architectural intent to guide users in building their own
-     AI applications and AI games was therefore present from
-     day one of EchoBird's public release.
+     separately in TRADEMARKS.md §4 — were ALREADY PRESENT in the
+     same initial commit 546a14ae on 2026-03-02. They were not
+     introduced when MyProjects shipped on 2026-05-20; MyProjects
+     merely re-positioned the already-existing reference apps from
+     "internal built-in tools" to "user-editable templates". Both
+     reference applications are intentionally model-bound — they
+     cannot function without a model connection from EchoBird's
+     central Model Nexus. The architectural intent to guide users
+     in building their own *model-bound* AI applications and AI
+     games (rather than generic vibe-coded apps that happen to be
+     in this folder) was therefore present from day one of
+     EchoBird's public release.
 
   4. LocalServer / 一键本地大模型 — One-click local LLM deployment
 

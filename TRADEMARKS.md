@@ -142,14 +142,33 @@ Reversi and AI Translator.
 | 2 — Real maintenance | **2026-03-25** | 8 commits including `2883548b`, `447a86ce`, `a1a66299`, `44a3eaee`, `5b1e2e7b`, `8914d02d`, `33e62d65` | `fix(reversi)` and `fix(translator)` covering UTF-8 corruption, max_tokens, streaming protocol, temperature parameter — the reference apps received first-class production-grade maintenance, proving they were treated as real products, not stubs. |
 | 3 — Formal user-template framing | **2026-05-20** | `5c7d853f`, `1db4f7e2` | Commit message verbatim: *"feat(myProjects): seed Reversi + Translator as user-editable reference copies"*. When My AI Projects shipped, the two already-existing reference apps were *re-positioned* from "internal built-in tools" to "user-editable templates" — completing the user-tutorial pattern. |
 
+**Important framing — narrow on purpose.** What is claimed here is
+NOT a generic "vibe-coded apps and games" store — that category has
+extensive prior art (Replit, Vercel, CodeSandbox, itch.io, etc.).
+What is claimed is the much narrower intersection of three conditions,
+all simultaneously satisfied by EchoBird's architecture:
+
+  1. **Desktop store form factor** — a desktop application acting as a
+     unified store/manager for other applications, not a web-hosted
+     gallery and not a cloud chat front-end.
+  2. **AI applications AND AI games together** — both domains present
+     in the same surface as first-class peer entities. Apps without
+     games (or games without apps) does not match this claim.
+  3. **Model-bound, not code-bound** — every app and game in the store
+     is *fundamentally* dependent on a configured AI model to run. The
+     unified `models.json` convention is the architectural realization:
+     no model means the app does nothing useful. This excludes generic
+     code-runners and sandbox PaaS, which run user code without any
+     model dependency.
+
 **No known prior art for any of the following:**
 
-- An AI-tool desktop manager that ships **complete real AI applications
-  and AI games** as user-tutorial templates rather than as marketing
-  demos.
+- A *desktop* store of **AI applications AND AI games** where every
+  entry is **model-bound** (depends on a configured model from the
+  store's central pool to function).
 - A unified `models.json` + `paths.json` convention that lets a user's
-  own AI app be registered into the desktop manager **identically to a
-  built-in app**.
+  own model-bound AI app or game be registered into the desktop store
+  **identically to a built-in entry**.
 - The combination of (a) reference-app-as-template, (b) shared card
   container between official and user-defined entities, and (c) central
   Model Nexus pool feeding both.
@@ -162,17 +181,26 @@ priority from **2026-03-02** (architecture in place) through
 
 **Forward-looking note (recorded here as priority anchor).** The
 day-one inclusion of both an AI *game* (Reversi) and an AI *application*
-(Translator) is not incidental — the architecture as published
-2026-03-02 already prefigures EchoBird's product trajectory toward a
-unified surface for AI applications AND AI games. As of 2026-05-22, no
-other company is known to be working in the "desktop AI application +
-AI game store" direction (HuggingFace Spaces is web-hosted demos;
-Ollama Library is model files only; OpenAI's GPTs Store and Anthropic's
-hosted experiences are cloud chat front-ends; Replit / Vercel are
-generic PaaS). Any later entrant in the AI app/game store space whose
-product format adopts three or more of the §3 surfaces or the
-reference-app-as-template pattern from §4 will be evaluated against the
-priority dates documented above.
+(Translator), each of which **cannot function without a model
+connection from EchoBird's central Model Nexus**, is not incidental.
+The architecture as published 2026-03-02 already prefigures EchoBird's
+trajectory toward a **"desktop store of model-bound AI applications
+and AI games"**. As of 2026-05-22, no other company is known to operate
+in this specific intersection:
+
+| Candidate | Why it does NOT match the claim |
+|---|---|
+| OpenAI GPTs Store | Cloud, no desktop; no game dimension; single-vendor model lock |
+| HuggingFace Spaces | Web-hosted demos; not a store; no app/game split |
+| Ollama Library | Model files only, no applications |
+| Civitai | Image-model + LoRA gallery, not an app/game store |
+| Replit / Vercel / CodeSandbox | Generic PaaS; not model-bound; not desktop |
+| Apple / Google App Store | Generic stores; no model-bound architecture; no store-level model pool |
+| Steam / itch.io | Game stores; no AI dimension; not model-bound |
+
+Any later entrant whose product format adopts three or more of the §3
+UI surfaces, OR the §4 model-bound reference-app pattern, will be
+evaluated against the priority dates documented above.
 
 ### 5. Combined trade-dress threshold (formal version in NOTICE)
 
@@ -391,12 +419,26 @@ AI 项目」面板里。
 | 2 — 真实维护期 | **2026-03-25** | `2883548b`、`447a86ce`、`a1a66299`、`44a3eaee`、`5b1e2e7b`、`8914d02d`、`33e62d65` 等 8 次提交 | `fix(reversi)` / `fix(translator)` 覆盖 UTF-8 修复、max_tokens、streaming 协议、temperature 参数 —— 这两个参考应用**得到生产级一级产品的真实维护**,证明它们是真应用而非占位符。 |
 | 3 — 形式化为用户模板 | **2026-05-20** | `5c7d853f`、`1db4f7e2` | Commit message 原文:*"feat(myProjects): seed Reversi + Translator as user-editable reference copies"*。我的 AI 项目发布时,**已存在的**两个参考应用从「内置工具」**重新定位**为「用户可编辑模板」,完成用户教程模式。 |
 
+**重要边界 —— 故意收窄的主张。** 此处主张的**不是**通用的「Vibe Coded
+应用与游戏 store」—— 那个范畴已有大量先例(Replit、Vercel、CodeSandbox、
+itch.io 等)。此处主张的是**远比这更狭窄的「三条件交集」**,目前由 EchoBird
+架构同时满足:
+
+  1. **桌面 store 形态** —— 一个桌面应用作为其他应用的统一 store / 管理器,
+     **不是**网页托管的画廊,**也不是**云端聊天前端。
+  2. **AI 应用与 AI 游戏并列** —— 两个领域作为对等的一级实体共存于同一界面。
+     只有应用没游戏(或只有游戏没应用)**不符合**本主张。
+  3. **模型绑定,而非代码绑定** —— store 内每一个应用和游戏都**根本性地**
+     依赖一个配置好的 AI 模型才能运行。统一的 `models.json` 约定是这种依赖
+     的架构实现:没有模型,应用做不了任何有意义的事。这条排除了所有通用代码
+     运行器和沙箱 PaaS(它们运行用户代码但不绑定模型)。
+
 **以下组合无任何已知先例:**
 
-- 一个 AI 工具桌面管理器,把**完整可运行的真 AI 应用与 AI 游戏**作为用户
-  教程模板内嵌发布,而不是用营销 demo
-- 统一的 `models.json` + `paths.json` 约定,让用户自己写的 AI 应用能
-  **与内置应用完全相同的方式**注册进桌面管理器
+- 一个**桌面**端**模型绑定的 AI 应用 + AI 游戏 store** —— 每一项条目都依赖
+  中央模型池中的某个配置才能运行
+- 统一的 `models.json` + `paths.json` 约定,让用户自己写的**模型绑定型**
+  AI 应用或游戏能**与内置条目完全相同的方式**注册进桌面 store
 - (a)参考应用作教程模板 + (b)官方工具与用户自定义实体共用同一卡片
   容器 + (c)中央 Model Nexus 池供两者共享 —— **这三件事的组合**
 - 把以上整套作为项目**首次公开 commit 的架构基础**,而不是后期改造
@@ -405,14 +447,23 @@ AI 项目」面板里。
 **2026-03-02(架构就位)→ 2026-05-20(用户模板形式化完成)**。
 
 **前瞻性声明(在此作为优先权锚定记录)。** 首日同时内置一个 AI **游戏**
-(黑白棋)与一个 AI **应用**(翻译器)并非偶然 —— 2026-03-02 公开发布
-的架构本身就已经预示了 EchoBird 朝**「AI 应用 + AI 游戏统一桌面 store」**
-方向的产品轨迹。截至 2026-05-22,**没有已知公司在「桌面 AI 应用 + AI 游戏
-store」方向运营**(HuggingFace Spaces 是网页托管 demo,Ollama Library
-只是模型文件,OpenAI GPTs Store 与 Anthropic 云端体验是云聊天前端,Replit
-/ Vercel 是通用 PaaS)。任何**后续**进入 AI 应用/游戏 store 领域的产品,
-若其产品形态采用 §3 三个或以上界面或 §4 参考应用模板模式,均将依本文档
-记录的优先权日逐项核对。
+(黑白棋)与一个 AI **应用**(翻译器),**且两者都无法在缺少 EchoBird 中央
+Model Nexus 模型连接的情况下运行**,并非偶然 —— 2026-03-02 公开发布的架构
+已经预示了 EchoBird 朝**「模型绑定型 AI 应用与 AI 游戏的桌面 store」** 方向
+的产品轨迹。截至 2026-05-22,**没有已知公司在此具体交集内运营**:
+
+| 候选 | 不符合本主张的原因 |
+|---|---|
+| OpenAI GPTs Store | 云端,无桌面;无游戏维度;单家厂商模型锁 |
+| HuggingFace Spaces | 网页托管 demo;不是 store;无应用/游戏区分 |
+| Ollama Library | 只是模型文件,无应用 |
+| Civitai | 图像模型 + LoRA 画廊,不是应用/游戏 store |
+| Replit / Vercel / CodeSandbox | 通用 PaaS;非模型绑定;非桌面 |
+| Apple / Google App Store | 通用 store;无模型绑定架构;无 store 级别模型池 |
+| Steam / itch.io | 游戏 store;无 AI 维度;非模型绑定 |
+
+任何**后续**进入此领域的产品,若其产品形态采用 §3 三个或以上 UI 界面,
+或 §4 模型绑定型参考应用模式,均将依本文档记录的优先权日逐项核对。
 
 ### 5. 整体商业外观侵权阈值(正式版在 NOTICE)
 
