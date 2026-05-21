@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EchoBird AI Game Store</title>
+<title>EchoBird AI 游戏商店</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
   body {
     background: #f5f5f7;
     color: #1d1d1f;
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC', 'Segoe UI', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'SF Pro Display', sans-serif;
     min-height: 100vh;
   }
   .topbar {
@@ -52,7 +52,7 @@
   }
   .hero .label { font-size: 13px; opacity: 0.85; letter-spacing: 1px; margin-bottom: 8px; }
   .hero h1 { font-size: 44px; font-weight: 700; letter-spacing: -1px; margin-bottom: 12px; }
-  .hero .sub { font-size: 18px; opacity: 0.9; max-width: 540px; line-height: 1.4; }
+  .hero .sub { font-size: 18px; opacity: 0.9; max-width: 540px; line-height: 1.5; }
 
   .section-title {
     font-size: 28px;
@@ -109,7 +109,7 @@
 
   .info { flex: 1; min-width: 0; }
   .info .name { font-size: 17px; font-weight: 500; letter-spacing: -0.3px; color: #1d1d1f; margin-bottom: 2px; }
-  .info .desc { font-size: 14px; color: #86868b; line-height: 1.35; }
+  .info .desc { font-size: 14px; color: #86868b; line-height: 1.45; }
 
   .actions { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex-shrink: 0; }
   .badge {
@@ -117,7 +117,6 @@
     color: #86868b;
     font-weight: 500;
     letter-spacing: 0.4px;
-    text-transform: uppercase;
   }
   .get {
     background: #f2f2f7;
@@ -140,7 +139,7 @@
     border-radius: 14px;
     color: #86868b;
     font-size: 13px;
-    line-height: 1.6;
+    line-height: 1.7;
   }
   .disclaimer strong { color: #1d1d1f; }
   .disclaimer a { color: #0071e3; text-decoration: none; }
@@ -151,138 +150,138 @@
 <body>
 
 <div class="topbar">
-  <div class="brand">EchoBird <span>· AI Game Store</span></div>
-  <a href="zh/" class="lang">中文 →</a>
+  <div class="brand">EchoBird <span>· AI 游戏商店</span></div>
+  <a href="../" class="lang">English →</a>
 </div>
 
 <main>
 
   <div class="hero">
-    <div class="label">EDITOR'S COLLECTION</div>
-    <h1>AI Games, configured once.</h1>
-    <p class="sub">Every game in this store taps into EchoBird's central Model Nexus — set up your model once, every game works.</p>
+    <div class="label">编辑精选</div>
+    <h1>AI 游戏,一次配置,全部生效。</h1>
+    <p class="sub">本商店中的每款游戏都接入 EchoBird 中央模型枢纽(Model Nexus)—— 模型配置一次,所有游戏立即可玩。</p>
   </div>
 
-  <h2 class="section-title">Featured AI Games</h2>
-  <p class="section-sub">12 model-bound games · all entries require an AI model from your Model Nexus pool</p>
+  <h2 class="section-title">精选 AI 游戏</h2>
+  <p class="section-sub">12 款模型绑定型游戏 · 每个条目都需要 Model Nexus 中央池里的 AI 模型才能运行</p>
 
   <div class="applist">
 
     <div class="row">
       <div class="ico c1">⚫</div>
       <div class="info">
-        <div class="name">Reversi vs AI</div>
-        <div class="desc">Human-vs-AI Othello with tunable difficulty and trash-talking opponent. Bundled with EchoBird since 2026-03-02.</div>
+        <div class="name">黑白棋(人机对战)</div>
+        <div class="desc">人机对战黑白棋,难度可调,带毒舌 AI 对手。自 2026-03-02 起随 EchoBird 内置。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get installed">INSTALLED</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get installed">已安装</button></div>
     </div>
 
     <div class="row">
       <div class="ico c2">♟️</div>
       <div class="info">
-        <div class="name">AI Chess Master</div>
-        <div class="desc">Play chess against an LLM-driven opponent that explains its moves.</div>
+        <div class="name">AI 国际象棋大师</div>
+        <div class="desc">与 LLM 驱动的 AI 对手下国际象棋,每一步都会解释思路。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c3">📖</div>
       <div class="info">
-        <div class="name">AI Story Adventure</div>
-        <div class="desc">Choose-your-own-adventure with infinite branching, all written by your model.</div>
+        <div class="name">AI 故事冒险</div>
+        <div class="desc">无限分支选项的互动小说,故事完全由你的 AI 模型生成。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c4">🎨</div>
       <div class="info">
-        <div class="name">AI Pixel Painter</div>
-        <div class="desc">Collaborative pixel art creation with your AI as co-artist.</div>
+        <div class="name">AI 像素画家</div>
+        <div class="desc">与 AI 协同创作像素艺术,AI 作为你的共创艺术家。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c5">🧠</div>
       <div class="info">
-        <div class="name">AI Trivia Battle</div>
-        <div class="desc">Multiplayer quiz with questions generated on-the-fly by your model.</div>
+        <div class="name">AI 智力问答</div>
+        <div class="desc">多人在线问答,题目由你的 AI 模型实时生成。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c6">🔤</div>
       <div class="info">
-        <div class="name">AI Word Duel</div>
-        <div class="desc">Word-association and wordplay games against an LLM that taunts in style.</div>
+        <div class="name">AI 文字对决</div>
+        <div class="desc">与会怼人的 LLM 玩词语联想与文字游戏。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c7">🔍</div>
       <div class="info">
-        <div class="name">AI Detective Mystery</div>
-        <div class="desc">Procedurally generated crime cases — interview AI-driven suspects to solve them.</div>
+        <div class="name">AI 侦探推理</div>
+        <div class="desc">程序生成的案件 —— 审问 AI 嫌疑人,推理破案。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c8">🎵</div>
       <div class="info">
-        <div class="name">AI Music Composer</div>
-        <div class="desc">Compose original tracks interactively with model-driven melody and harmony.</div>
+        <div class="name">AI 音乐创作</div>
+        <div class="desc">交互式创作原创乐曲,旋律与和声由 AI 协同生成。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c9">⚔️</div>
       <div class="info">
-        <div class="name">Tactical AI Wars</div>
-        <div class="desc">Turn-based strategy with an opponent that adapts to your playstyle.</div>
+        <div class="name">AI 战略对战</div>
+        <div class="desc">回合制策略游戏,AI 对手会自适应你的打法。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c10">🏰</div>
       <div class="info">
-        <div class="name">AI Dungeon Master</div>
-        <div class="desc">Open-ended D&amp;D-style RPG with your model as game master.</div>
+        <div class="name">AI 跑团大师</div>
+        <div class="desc">开放式 D&amp;D 风格 RPG,你的 AI 模型担任游戏主持人。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c11">🧩</div>
       <div class="info">
-        <div class="name">AI Riddles</div>
-        <div class="desc">Endless puzzle generator — riddles, ciphers, lateral-thinking challenges.</div>
+        <div class="name">AI 谜题</div>
+        <div class="desc">永不重复的谜题生成器 —— 谜语、密码、侧向思维挑战。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c12">🃏</div>
       <div class="info">
-        <div class="name">AI Card Battles</div>
-        <div class="desc">Collectible card game with an AI opponent that builds decks on the fly.</div>
+        <div class="name">AI 卡牌对战</div>
+        <div class="desc">集换式卡牌游戏,AI 对手会即时组建卡组应战。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
   </div>
 
   <div class="disclaimer">
-    <p><strong>EchoBird AI Game Store</strong> — concept document, not commercially released.</p>
-    <p style="margin-top:8px;">All entries shown are model-bound: each game requires a configured AI model from EchoBird's central Model Nexus to function. The unified architecture is documented in the project's <a href="../../TRADEMARKS.md">TRADEMARKS.md</a> §3–§4 and <a href="../../NOTICE">NOTICE</a> §A.</p>
-    <p style="margin-top:8px;">This page exists as defensive publication evidence for the EchoBird AI Game Store concept and its underlying trade dress. First public commit: <a href="https://github.com/edison7009/EchoBird/commits/main/docs/ai-game-store/index.html">git history</a>.</p>
-    <p class="stamp">CONCEPT · NOT FOR PRODUCTION USE · NO INSTALL ACTION IS WIRED · 2026-05-22</p>
+    <p><strong>EchoBird AI 游戏商店</strong> —— 概念文档,尚未商业发布。</p>
+    <p style="margin-top:8px;">商店中所有条目均为**模型绑定型** —— 每款游戏都需要 EchoBird 中央 <strong>Model Nexus</strong> 中配置好的 AI 模型才能运行。统一的产品架构记录于本项目 <a href="../../../TRADEMARKS.md">TRADEMARKS.md</a> §3-§4 与 <a href="../../../NOTICE">NOTICE</a> A 段。</p>
+    <p style="margin-top:8px;">本页面作为 EchoBird AI 游戏商店概念与底层 trade dress 的**防御性公开**(defensive publication)证据存档。首次公开 commit 见 <a href="https://github.com/edison7009/EchoBird/commits/main/docs/ai-game-store/zh/index.html">git 历史</a>。</p>
+    <p class="stamp">CONCEPT · 非生产环境 · 无实际安装动作 · 2026-05-22</p>
   </div>
 
 </main>

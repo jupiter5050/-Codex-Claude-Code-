@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EchoBird AI App Store</title>
+<title>EchoBird AI 应用商店</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
   body {
     background: #f5f5f7;
     color: #1d1d1f;
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC', 'Segoe UI', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'SF Pro Display', sans-serif;
     min-height: 100vh;
   }
   .topbar {
@@ -52,7 +52,7 @@
   }
   .hero .label { font-size: 13px; opacity: 0.85; letter-spacing: 1px; margin-bottom: 8px; }
   .hero h1 { font-size: 44px; font-weight: 700; letter-spacing: -1px; margin-bottom: 12px; }
-  .hero .sub { font-size: 18px; opacity: 0.9; max-width: 540px; line-height: 1.4; }
+  .hero .sub { font-size: 18px; opacity: 0.9; max-width: 540px; line-height: 1.5; }
 
   .section-title {
     font-size: 28px;
@@ -109,7 +109,7 @@
 
   .info { flex: 1; min-width: 0; }
   .info .name { font-size: 17px; font-weight: 500; letter-spacing: -0.3px; color: #1d1d1f; margin-bottom: 2px; }
-  .info .desc { font-size: 14px; color: #86868b; line-height: 1.35; }
+  .info .desc { font-size: 14px; color: #86868b; line-height: 1.45; }
 
   .actions { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex-shrink: 0; }
   .badge {
@@ -117,7 +117,6 @@
     color: #86868b;
     font-weight: 500;
     letter-spacing: 0.4px;
-    text-transform: uppercase;
   }
   .get {
     background: #f2f2f7;
@@ -140,7 +139,7 @@
     border-radius: 14px;
     color: #86868b;
     font-size: 13px;
-    line-height: 1.6;
+    line-height: 1.7;
   }
   .disclaimer strong { color: #1d1d1f; }
   .disclaimer a { color: #0071e3; text-decoration: none; }
@@ -151,138 +150,138 @@
 <body>
 
 <div class="topbar">
-  <div class="brand">EchoBird <span>· AI App Store</span></div>
-  <a href="zh/" class="lang">中文 →</a>
+  <div class="brand">EchoBird <span>· AI 应用商店</span></div>
+  <a href="../" class="lang">English →</a>
 </div>
 
 <main>
 
   <div class="hero">
-    <div class="label">EDITOR'S COLLECTION</div>
-    <h1>AI Apps, configured once.</h1>
-    <p class="sub">Every app in this store taps into EchoBird's central Model Nexus — set up your model once, every app works.</p>
+    <div class="label">编辑精选</div>
+    <h1>AI 应用,一次配置,全部生效。</h1>
+    <p class="sub">本商店中的每个应用都接入 EchoBird 中央模型枢纽(Model Nexus)—— 模型配置一次,所有应用立即可用。</p>
   </div>
 
-  <h2 class="section-title">Featured AI Apps</h2>
-  <p class="section-sub">12 model-bound applications · all entries require an AI model from your Model Nexus pool</p>
+  <h2 class="section-title">精选 AI 应用</h2>
+  <p class="section-sub">12 款模型绑定型应用 · 每个条目都需要 Model Nexus 中央池里的 AI 模型才能运行</p>
 
   <div class="applist">
 
     <div class="row">
       <div class="ico c1">📝</div>
       <div class="info">
-        <div class="name">AI Writer Pro</div>
-        <div class="desc">Long-form articles, essays, and marketing copy with style controls.</div>
+        <div class="name">AI 写作大师</div>
+        <div class="desc">生成长篇文章、随笔、营销文案,支持风格控制。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c2">🎨</div>
       <div class="info">
-        <div class="name">AI Image Studio</div>
-        <div class="desc">Text-to-image, inpainting, style transfer with local or cloud diffusion models.</div>
+        <div class="name">AI 图像工作室</div>
+        <div class="desc">文生图、局部重绘、风格迁移,本地或云端扩散模型均可。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c3">🔍</div>
       <div class="info">
-        <div class="name">AI Code Reviewer</div>
-        <div class="desc">Static analysis + LLM-based code review with project-aware context.</div>
+        <div class="name">AI 代码评审</div>
+        <div class="desc">静态分析 + LLM 代码评审,结合项目上下文。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c4">📓</div>
       <div class="info">
-        <div class="name">Smart Notes</div>
-        <div class="desc">AI-augmented note-taking with semantic search and auto-summarization.</div>
+        <div class="name">智能笔记</div>
+        <div class="desc">AI 增强的笔记应用,支持语义搜索与自动摘要。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c5">🎙️</div>
       <div class="info">
-        <div class="name">AI Voice Generator</div>
-        <div class="desc">Text-to-speech with cloned voices, multiple languages, emotion control.</div>
+        <div class="name">AI 语音生成器</div>
+        <div class="desc">文本转语音,支持声音克隆、多语言与情感控制。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c6">📊</div>
       <div class="info">
-        <div class="name">AI Data Analyzer</div>
-        <div class="desc">Ask questions in natural language; get SQL, charts, insights from your data.</div>
+        <div class="name">AI 数据分析师</div>
+        <div class="desc">用自然语言提问,自动生成 SQL、图表与洞察。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c7">✉️</div>
       <div class="info">
-        <div class="name">AI Email Composer</div>
-        <div class="desc">Draft, polish, translate emails with tone and audience awareness.</div>
+        <div class="name">AI 邮件撰写</div>
+        <div class="desc">撰写、润色、翻译邮件,自动调整语气与对象。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c8">🎯</div>
       <div class="info">
-        <div class="name">AI Meeting Summary</div>
-        <div class="desc">Transcribe meetings, extract action items, generate follow-up emails.</div>
+        <div class="name">AI 会议纪要</div>
+        <div class="desc">转录会议、提取行动项、自动生成跟进邮件。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c9">🎓</div>
       <div class="info">
-        <div class="name">Personal AI Tutor</div>
-        <div class="desc">Subject-specific tutoring with adaptive difficulty and progress tracking.</div>
+        <div class="name">个人 AI 家教</div>
+        <div class="desc">学科个性化辅导,自适应难度与进度跟踪。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c10">📄</div>
       <div class="info">
-        <div class="name">AI Document OCR</div>
-        <div class="desc">Extract text from scans, understand layout, query the content.</div>
+        <div class="name">AI 文档识别</div>
+        <div class="desc">从扫描件提取文本,理解版式,自然语言问答。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
     <div class="row">
       <div class="ico c11">🌐</div>
       <div class="info">
-        <div class="name">AI Translator</div>
-        <div class="desc">Real-time bilingual translation with context preservation. Bundled with EchoBird since 2026-03-02.</div>
+        <div class="name">AI 翻译</div>
+        <div class="desc">实时双语翻译,保留上下文。自 2026-03-02 起随 EchoBird 内置。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get installed">INSTALLED</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get installed">已安装</button></div>
     </div>
 
     <div class="row">
       <div class="ico c12">📈</div>
       <div class="info">
-        <div class="name">AI Spreadsheet</div>
-        <div class="desc">Natural-language formulas, automatic categorization, smart pivots.</div>
+        <div class="name">AI 表格</div>
+        <div class="desc">自然语言公式、自动分类、智能数据透视。</div>
       </div>
-      <div class="actions"><span class="badge">REQUIRES MODEL</span><button class="get">GET</button></div>
+      <div class="actions"><span class="badge">需要模型</span><button class="get">获取</button></div>
     </div>
 
   </div>
 
   <div class="disclaimer">
-    <p><strong>EchoBird AI App Store</strong> — concept document, not commercially released.</p>
-    <p style="margin-top:8px;">All entries shown are model-bound: each application requires a configured AI model from EchoBird's central Model Nexus to function. The unified architecture is documented in the project's <a href="../../TRADEMARKS.md">TRADEMARKS.md</a> §3–§4 and <a href="../../NOTICE">NOTICE</a> §A.</p>
-    <p style="margin-top:8px;">This page exists as defensive publication evidence for the EchoBird AI App Store concept and its underlying trade dress. First public commit: <a href="https://github.com/edison7009/EchoBird/commits/main/docs/ai-app-store/index.html">git history</a>.</p>
-    <p class="stamp">CONCEPT · NOT FOR PRODUCTION USE · NO INSTALL ACTION IS WIRED · 2026-05-22</p>
+    <p><strong>EchoBird AI 应用商店</strong> —— 概念文档,尚未商业发布。</p>
+    <p style="margin-top:8px;">商店中所有条目均为**模型绑定型** —— 每个应用都需要 EchoBird 中央 <strong>Model Nexus</strong> 中配置好的 AI 模型才能运行。统一的产品架构记录于本项目 <a href="../../../TRADEMARKS.md">TRADEMARKS.md</a> §3-§4 与 <a href="../../../NOTICE">NOTICE</a> A 段。</p>
+    <p style="margin-top:8px;">本页面作为 EchoBird AI 应用商店概念与底层 trade dress 的**防御性公开**(defensive publication)证据存档。首次公开 commit 见 <a href="https://github.com/edison7009/EchoBird/commits/main/docs/ai-app-store/zh/index.html">git 历史</a>。</p>
+    <p class="stamp">CONCEPT · 非生产环境 · 无实际安装动作 · 2026-05-22</p>
   </div>
 
 </main>
