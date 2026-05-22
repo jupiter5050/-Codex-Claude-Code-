@@ -8,6 +8,20 @@
   ],
   "courses": [
     {
+      "id": "en-claude-code-quickstart",
+      "name": "Claude Code Quickstart",
+      "url": "https://coffeecli.com/courses/claude-code",
+      "description": "Fast-track guide to Claude Code — setup, core workflows, and practical tips for shipping with AI in minutes.",
+      "category": "AI Coding"
+    },
+    {
+      "id": "en-coffeecli-founders-playbook",
+      "name": "Founders Playbook with Claude",
+      "url": "https://coffeecli.com/courses/founders-playbook",
+      "description": "AI startup playbook for indie builders — using Claude to ship products and validate businesses end-to-end.",
+      "category": "AI Founders"
+    },
+    {
       "id": "en-greg-isenberg",
       "name": "Greg Isenberg · Startup Ideas",
       "url": "https://www.youtube.com/@GregIsenberg",

@@ -2,6 +2,13 @@
   "categories": ["AI 创业", "AI 编程", "AI 内容创作", "Prompt 与 Agent", "学习平台"],
   "courses": [
     {
+      "id": "cn-claude-code-quickstart",
+      "name": "Claude Code 快速上手",
+      "url": "https://coffeecli.com/courses/claude-code",
+      "description": "Claude Code 入门实战:环境配置、核心工作流、常用技巧,几分钟带你跑通第一个 AI 编程闭环",
+      "category": "AI 编程"
+    },
+    {
       "id": "cn-claude-founders-playbook",
       "name": "Claude 教你用 AI 创业",
       "url": "https://coffeecli.com/courses/founders-playbook",

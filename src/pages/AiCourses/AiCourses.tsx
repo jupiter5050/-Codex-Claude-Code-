@@ -79,6 +79,15 @@ const CN_CATEGORIES = ['AI 创业', 'AI 编程', 'AI 内容创作', 'Prompt 与 
 
 const CN_COURSES: Course[] = [
   {
+    id: 'cn-claude-code-quickstart',
+    name: 'Claude Code 快速上手',
+    url: 'https://coffeecli.com/courses/claude-code',
+    description:
+      'Claude Code 入门实战:环境配置、核心工作流、常用技巧,几分钟带你跑通第一个 AI 编程闭环',
+    category: 'AI 编程',
+    lang: 'zh',
+  },
+  {
     id: 'cn-claude-founders-playbook',
     name: 'Claude 教你用 AI 创业',
     url: 'https://coffeecli.com/courses/founders-playbook',
@@ -247,6 +256,24 @@ const EN_CATEGORIES = [
 ];
 
 const EN_COURSES: Course[] = [
+  {
+    id: 'en-claude-code-quickstart',
+    name: 'Claude Code Quickstart',
+    url: 'https://coffeecli.com/courses/claude-code',
+    description:
+      'Fast-track guide to Claude Code — setup, core workflows, and practical tips for shipping with AI in minutes.',
+    category: 'AI Coding',
+    lang: 'en',
+  },
+  {
+    id: 'en-coffeecli-founders-playbook',
+    name: 'Founders Playbook with Claude',
+    url: 'https://coffeecli.com/courses/founders-playbook',
+    description:
+      'AI startup playbook for indie builders — using Claude to ship products and validate businesses end-to-end.',
+    category: 'AI Founders',
+    lang: 'en',
+  },
   {
     id: 'en-greg-isenberg',
     name: 'Greg Isenberg · Startup Ideas',
