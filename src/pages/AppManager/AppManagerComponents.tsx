@@ -460,7 +460,7 @@ export const AppManagerPanel: React.FC = () => {
             <span
               className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white transition-all duration-200 ${
                 relayModeValue
-                  ? 'translate-x-5 shadow-[0_1px_2px_rgba(0,0,0,0.35)]'
+                  ? 'translate-x-[18px] shadow-[0_1px_2px_rgba(0,0,0,0.35)]'
                   : 'translate-x-1'
               }`}
             />
