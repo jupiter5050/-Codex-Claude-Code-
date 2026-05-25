@@ -550,10 +550,12 @@ function ContextRing({ ratio, children }: ContextRingProps) {
   const circumference = 2 * Math.PI * radius;
   const dashOffset = circumference * (1 - clamped);
 
-  // Stop colors: secondary text below 70%, warning amber 70–90%, error red above 90%
+  // Stop colors match the industry-standard context-usage palette
+  // (Cursor / ChatGPT / Claude): cyan accent → amber → red as the
+  // payload fills toward the trim threshold.
   const strokeClass =
     clamped < 0.7
-      ? 'stroke-cyber-text-secondary/70'
+      ? 'stroke-cyber-accent'
       : clamped < 0.9
         ? 'stroke-cyber-warning'
         : 'stroke-cyber-error';
