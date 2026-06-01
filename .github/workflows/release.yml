@@ -91,7 +91,7 @@ jobs:
       # Pinned to 1.93 — see comment in ci.yml. Keep both files in
        # lockstep so a deliberate bump touches both.
       - name: Install Rust 1.93 (pinned)
-        uses: dtolnay/rust-toolchain@1.93
+        uses: dtolnay/rust-toolchain@1.100
         with:
           targets: ${{ matrix.rust-target }}
 
