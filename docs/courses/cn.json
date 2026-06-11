@@ -5,14 +5,14 @@
       "id": "cn-echobird-codex-marketplace",
       "name": "Codex 中文插件市场",
       "url": "https://echobird.cn/",
-      "description": "EchoBird 官方出品:主打纯简体中文技能,告别英文的困扰;复制 git 地址一键添加,还能帮你发布你开发的技能",
+      "description": "主打纯简体中文技能,告别英文的困扰;复制 git 地址一键添加,还能帮你发布你开发的技能",
       "category": "AI 编程"
     },
     {
       "id": "cn-echobird-openrouter-guide",
       "name": "白嫖 OpenRouter 免费模型",
       "url": "https://echobird.ai/openrouter/",
-      "description": "EchoBird 官方教程:用 OpenRouter 每天 50 次免费请求,跑遍最新顶尖大模型,不花一分钱",
+      "description": "用 OpenRouter 每天 50 次免费请求,跑遍最新顶尖大模型,不花一分钱",
       "category": "AI 编程"
     },
     {
